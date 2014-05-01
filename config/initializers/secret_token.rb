@@ -1,3 +1,5 @@
+SampleApp::Application.config.secret_key_base = secure_token
+
 # Be sure to restart your server when you modify this file.
 
 # Your secret key is used for verifying the integrity of signed cookies.
@@ -9,8 +11,6 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-# SampleApp::Application.config.secret_key_base = '4d5095d4368663b9655e488e97a960b24d0175e41015a62c847dad65077149f5f6f570d98568b04f7d31f57531621648e2342ef11bc6c0ba495c523abaa8f39b'
-
 require 'securerandom'
 
 def secure_token
