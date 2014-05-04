@@ -1,70 +1,43 @@
 require 'spec_helper'
 
-describe "Static Pages" do
-  
+describe "Static pages" do
+
   describe "Home page" do
-    
+
     it "should have the content 'Sample App'" do
       visit '/static_pages/home'
       expect(page).to have_content('Sample App')
     end
+
     it "should have the title 'Home'" do
       visit '/static_pages/home'
-      expect(page).to have_title("Ruby on Rails Tutorial| Home")
-    end   
-    it "should not have a custom page title" do
-      visit '/static_pages/home'
-      expect(page).not_to have_title('| Home')
+      expect(page).to have_title("Ruby on Rails Tutorial Sample App | Home")
     end
-  end
-
-  end
-end
-
-describe "Static pages" do
-
+    
   describe "Help page" do
 
     it "should have the content 'Help'" do
       visit '/static_pages/help'
       expect(page).to have_content('Help')
     end
+
     it "should have the title 'Help'" do
       visit '/static_pages/help'
-      expect(page).to have_title("Ruby on Rails Tutorial | Help")
-    end   
-
+      expect(page).to have_title("Ruby on Rails Tutorial Sample App | Help")
+    end
   end
-end
-
-describe "Static pages" do
 
   describe "About page" do
 
-    it "should have the content 'About'" do
+    it "should have the content 'About Us'" do
       visit '/static_pages/about'
-      expect(page).to have_content('About')
+      expect(page).to have_content('About Us')
     end
-  	
-  	it "should have the title 'About'" do
+
+    it "should have the title 'About Us'" do
       visit '/static_pages/about'
-      expect(page).to have_title("Ruby on Rails Tutorial | About")
-    end   
+      expect(page).to have_title("Ruby on Rails Tutorial Sample App | About Us")
+    end
   end
 end
 
-describe "Static pages" do
-
-  describe "contact page" do
-
-    it "should have the content 'Contact'" do
-      visit '/static_pages/contact'
-      expect(page).to have_content('Contact')
-    end
-    it "should have the title 'Contact'" do
-      visit '/static_pages/contact'
-      expect(page).to have_title("Ruby on Rails Tutorial | Contact")
-    end   
-
-  end
-end
