@@ -2,8 +2,6 @@ require 'spec_helper'
 
 describe "Static pages" do
 
-<<<<<<< HEAD
-=======
   subject { page }
 
   describe "Home page" do
@@ -14,26 +12,12 @@ describe "Static pages" do
     it { should_not have_title('| Home') }
   end
 
->>>>>>> filling-in-layout
   describe "Help page" do
     before { visit help_path }
 
-<<<<<<< HEAD
-    it "should have the content 'Help'" do
-      visit '/static_pages/help'
-      expect(page).to have_content('Help')
-    end
-    it "should have the title 'Help'" do
-      visit '/static_pages/help'
-      expect(page).to have_title("Ruby on Rails | Help")
-    end   
-  end
-
-=======
     it { should have_content('Help') }
     it { should have_title(full_title('Help')) }
   end
->>>>>>> filling-in-layout
 
   describe "About page" do
     before { visit about_path }
